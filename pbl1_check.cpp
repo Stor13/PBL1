@@ -78,6 +78,7 @@ void ghifile(char tenfile[20], int a[],int &d,int &s,int &l)
   for (int i=0;i<d*2;i++)
   {  scanf ("%d",&a[i]);
   fprintf(f," %d ",a[i]);
+  if (i%2) fprintf(f,"\n");
   }
   }
 fclose(f);
@@ -109,8 +110,10 @@ main ()
   do
   {
   	printf("\n1.Nhap moi test case.");
-  	printf("\n2.Xuat tu file 1:Ve den nha");
-  	printf("\n3.Xuat tu file 2:Khong ve den nha");
+  	printf("\n2.Xuat tu file 1:");
+  	printf("\n3.Xuat tu file 2:");
+  	printf("\n4.Xuat tu file 3:");
+  	printf("\n5.Xuat tu file 4:");
   	printf("\n0.Ket thuc");
   	printf("\nNhap STT cong viec:");
   	scanf("%d",&cv);
@@ -122,8 +125,13 @@ main ()
 	    break;
 		case 3://ghifile("thu2.txt",a,d,s,l);
 		docfile("thu2.txt",a,d,s,l);
+		break;
+		case 4://ghifile("thu3.txt",a,d,s,l);
+		docfile("thu3.txt",a,d,s,l);
+		break;
+		case 5://ghifile("thu4.txt",a,d,s,l);
+		docfile("thu4.txt",a,d,s,l);
        break;
 	}
-  }while(cv!=0);
+  }while(cv!=0); 	
 }
-
